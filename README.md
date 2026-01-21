@@ -1,77 +1,42 @@
 # Stochastic-LCOS-of-FB
-A comprehensive Python visualization suite for techno-economic analysis of flow battery chemistries, focusing on Levelized Cost of Storage (LCOS) calculations with stochastic modeling and risk assessment.
 
-## Overview
+##Overview
 
-This open-source script provides a complete framework for analyzing and comparing different flow battery chemistries through:
-- **Deterministic LCOS ranking** with economic benchmarks
-- **Monte Carlo simulation** with 10,000-run stochastic modeling
-- **Risk-return analysis** incorporating energy density metrics
-- **Comprehensive visualization** with publication-ready figures
+This open-source script provides a complete framework for estimating levelized cost of storage (LCOS) across eight vanadium-based flow-battery chemistries via deterministic ranking and 10 000-run Monte-Carlo risk analysis.
 
-## Features
+##Features
 
-### 🔋 **Multi-Chemistry Support**
-- 8 flow battery chemistries: V-H₂, V-Zn, V-Br, V-Ce, V-Mn, V-Fe, V-V (Baseline), V-O₂
-- Energy density integration (15-65 Wh L⁻¹)
-- Baseline comparison with V-V system
+• Ready-to-run – only numpy, pandas, scipy, matplotlib required
+• Compares V-V baseline vs. V-H₂, V-Zn, V-Br, V-Ce, V-Mn, V-Fe, V-O₂ (15–65 Wh L⁻¹)
+• Validates against DOE target (0.05 USD kWh⁻¹ cycle⁻¹) and 20 % reduction threshold
+• Outputs Markdown tables and publication-ready figures that can be pasted directly into papers or reports
 
-### 📊 **Advanced Economic Modeling**
-- **DOE target benchmarking** (0.05 USD/kWh·cycle)
-- **20% reduction threshold** analysis from baseline
-- **Monte Carlo simulation** with skewed distributions
-- **Value-at-Risk (VaR)** calculations at 95% confidence
+##Methodology
 
-### 📈 **Publication-Ready Visualizations**
-- **Figure 1**: Deterministic ranking with economic thresholds
-- **Figure 2**: Stochastic distributions with confidence intervals
-- **Figure 3**: Risk-return bubble chart with energy density scaling
-- **Sequential layout** for progressive analysis
+NREL-style LCOS model coupled with log-normal Monte-Carlo simulation (10 000 runs, 95 % CI) to generate VaR(95 %) and risk-adjusted returns; bubble sizes scale with energy density.
+Applications
 
-## Methodology
+• Research institutions: Benchmark novel electrolyte formulations
+• Industry stakeholders: Screen chemistries for MW-scale cost-down studies
+• Policy makers: Assess cost-target feasibility for long-duration storage
+• Investors: Risk-return evaluation under price uncertainty
 
-### LCOS Calculation
-Based on NREL methodology with:
-- Capital expenditure (CAPEX) amortization
-- Operational expenditure (OPEX) projections
-- Efficiency degradation modeling
-- End-of-life considerations
+##Contributing
 
-### Stochastic Modeling
-- **Distribution**: Lognormal with skewness adjustment
-- **Simulation**: 10,000 Monte Carlo runs
-- **Confidence intervals**: 95% two-tailed
-- **Risk metrics**: VaR(95%) and Sharpe ratios
+We welcome contributions! Please see our Contributing Guide for code style, testing, and pull-request process.
 
-## Applications
+##License
 
-- **Research institutions**: Comparative techno-economic analysis
-- **Industry stakeholders**: Technology benchmarking
-- **Policy makers**: Cost target assessment
-- **Investors**: Risk-return evaluation
+This project is licensed under the MIT License – see the LICENSE file for details.
 
-## Contributing
+##Citation
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for:
-- Code style guidelines
-- Testing procedures
-- Pull request process
+If you use this code in an academic work, please cite:
+Khaje, K. (2026). Flow Battery LCOS Analysis Tool (v1.0). https://github.com/kourosh-khaje/Stochastic-LCOS-of-FB.git
 
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Citation
-
-If you use this code in an academic work, please cite: Khaje, K. (2026). Flow Battery LCOS Analysis Tool (v1.0), https://github.com/kourosh-khaje/Stochastic-LCOS-of-FB.git 
-
-## Contact
+##Contact
 
 For questions or suggestions:
-- Create an [Issue](https://github.com/yourusername/flow-battery-lcos-analysis/issues)
-- Email: kourosh.khaje@outlook.com 
-- Discussion forum: [GitHub Discussions](https://github.com/yourusername/flow-battery-lcos-analysis/discussions)
-
----
-
-**Keywords**: flow battery, LCOS, techno-economic analysis, Monte Carlo simulation, energy storage, vanadium redox, risk assessment
+• Create an Issue
+• Email: kourosh.khaje@outlook.com
+• Discussion forum: GitHub Discussions
